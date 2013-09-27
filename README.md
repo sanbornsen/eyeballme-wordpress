@@ -10,8 +10,12 @@
 
 <p><strong>3. How to use it?</strong></p>
 
-<p><u>Step 1:</u> Download the plugin, it comes in a directory named eyeballme-wordpress, move it to your wordpress plugin directory. i.e. wp-content/plugins/eyeballme-wordpress.</p>
+<p><strong>Step 1:</strong> Download the plugin, it comes in a directory named eyeballme-wordpress, move it to your wordpress plugin directory. i.e. wp-content/plugins/eyeballme-wordpress.</p>
 
-<p><u>Step 2:</u> Just go and grap your appId and apiKey from http://developers.eyeballme.co. Open the file named eyeballme.php and replace $appId with the appId you have got from us and $apiKey with the apiKey. <em>Note: $appId and $apiKey both should be in string format. i.e. if you have got an appId 12322123, then you should write $appId = &#39;12322123&#39;.</em></p>
+<p><strong>Step 2:</strong> Just go and grap your appId and apiKey from http://developers.eyeballme.co. Open the file named eyeballme.php and replace $appId with the appId you have got from us and $apiKey with the apiKey.</p>
 
-<p><u>Step 3:</u> Now just install the plugin and forget about it. :) We&#39;ll remind you when to update and where to update.</p>
+<blockquote>
+<p><em>Note: $appId and $apiKey both should be in string format. i.e. if you have got an appId 12322123, then you should write $appId = &#39;12322123&#39;.</em></p>
+</blockquote>
+
+<p><strong>Step 3:</strong> Now just install the plugin and forget about it. :) We&#39;ll remind you when to update and where to update.</p>
