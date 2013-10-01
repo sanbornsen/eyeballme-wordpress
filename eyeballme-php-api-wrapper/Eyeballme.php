@@ -169,9 +169,9 @@ class Eyeballme
 		public function createJS(){
 			$html = '<div id="basic-modal-content"></div>';
 			$html .= '<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>';
-			$html .= '<script type="text/javascript" src="https://dl.dropboxusercontent.com/u/107817493/vindowshop/js/jquery.js"></script>';
-			$html .= '<script type="text/javascript" src="https://dl.dropboxusercontent.com/u/107817493/vindowshop/js/jquery.simplemodal.js"></script>';
-			$html .= '<script type="text/javascript" src="https://dl.dropboxusercontent.com/u/107817493/vindowshop/js/vindowshop.js"></script>';
+			$html .= '<script type="text/javascript" src="http://www.vindowshop.com/ebmplugins/js/jquery.js"></script>';
+			$html .= '<script type="text/javascript" src="http://www.vindowshop.com/ebmplugins/js/jquery.simplemodal.js"></script>';
+			$html .= '<script type="text/javascript" src="http://www.vindowshop.com/ebmplugins/js/vindowshop.js"></script>';
 			$html .= '<script type="text/javascript" >';
 			$html .= 'var img_array = '.str_replace('"', "'", $this->getMyImages()).';';
 			$html .= 'var img = document.body.getElementsByTagName("img");';
@@ -181,8 +181,8 @@ class Eyeballme
 			$html .= 'img[i].parentNode.setAttribute(\'style\',\'display: inline-block;position: relative;\');';
 			$html .= 'img[i].parentNode.innerHTML = img[i].parentNode.innerHTML+new_html;';
 			$html .= '}i++;} function addquote(str){return \'"\'+str+\'"\'}</script>';
-			$html .= '<link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/107817493/vindowshop/css/basic.css" type="text/css" media="all" />';
-			$html .= '<link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/107817493/vindowshop/css/VindowShop.css" type="text/css" media="all" />';
+			$html .= '<link rel="stylesheet" href="http://www.vindowshop.com/ebmplugins/css/basic.css" type="text/css" media="all" />';
+			$html .= '<link rel="stylesheet" href="http://www.vindowshop.com/ebmplugins/css/VindowShop.css" type="text/css" media="all" />';
 			return $html;
 		}
 
