@@ -183,7 +183,7 @@ class Eyeballme
 			$html .= 'var img = document.body.getElementsByTagName("img");';
 			$html .= 'var i = 0;var image_url=[];baseurl = window.location.protocol+"//"+window.location.host;';
 			$html .= 'while (i < img.length) { var pos = inArray(img[i].src, img_array); if(pos == \'not found\'){pos = inArray(img[i].src.replace(baseurl,""), img_array);} image_url.push(\'"\'+img[i].src+\'"\');';
-			$html .= 'if(pos != \'not found\'){var new_html = "<a href=\'javascript:void(0)\'><img onmouseover=\'javascript:lights_in(this)\' onclick=\'javascript:select_gender(this,"+addquote(img[i].src)+")\' onmouseout=\'javascript:lights_out(this)\' style=\'opacity: 0.4; position: absolute; z-index: 1; top: 15px; right: 30px; max-height:40px\' src=\'http://www.f6s.com/pictures/profiles/17/1641/164049_th2.jpg\'></a>";';
+			$html .= 'if(pos != \'not found\'){var new_html = "<a href=\'javascript:void(0)\'><img onmouseover=\'javascript:lights_in(this)\' onclick=\'javascript:select_gender(this,"+addquote(img[i].src)+")\' onmouseout=\'javascript:lights_out(this)\' style=\'opacity: 0.4; position: absolute; z-index: 1; top: 15px; right: 30px; max-height:40px\' src=\'http://eyeballme.co/ebmtool_logo.png\'></a>";';
 			$html .= 'img[i].parentNode.setAttribute(\'style\',\'display: inline-block;position: relative;\');';
 			$html .= 'img[i].parentNode.innerHTML = img[i].parentNode.innerHTML+new_html;';
 			$html .= '}i++;} function addquote(str){return \'"\'+str+\'"\'}</script>';
