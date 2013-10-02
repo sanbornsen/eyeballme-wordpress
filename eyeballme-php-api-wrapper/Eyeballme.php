@@ -6,13 +6,13 @@
 class Eyeballme
 {
 	//define version
-	const version = 0.01;
+	const version = 1.01;
 
 	//define author
 	const author = 'sanborn';	
 
 	//define Eyeballme api baseurl
-	const API_URL = "http://vindowshop.com:9999/";
+	const API_URL = "http://vindowshop.com:5201/";
 
 
 	//app_id and and api key provided by Eyeballme
@@ -95,8 +95,10 @@ class Eyeballme
 			foreach($imgs as $image){
 				$images[] = rtrim($image,'\\');
 			}
-			$data = array('from_wrapper',$images);			
-			$response = $this->apiRequest('',$data);
+			if(isset($images)){
+				$data = array('from_wrapper',$images);			
+				$response = $this->apiRequest('',$data);
+			}
 		}
 
 	/**
