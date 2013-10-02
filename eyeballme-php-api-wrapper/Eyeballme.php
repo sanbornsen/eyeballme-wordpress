@@ -108,13 +108,22 @@ class Eyeballme
 	*/
 
 		private function getImagesUrls($string){
+			$url  = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+			$baseUrl = "$url$_SERVER[HTTP_HOST]";
 			$imageTags = $this->getImageTags($string);
 			$imageTags = implode(" ", $imageTags);
 			$regex = '/(src)=("[^"]*")/i';
 			preg_match_all($regex, $imageTags, $matches);
 			$array = array();
 			foreach ($matches[2] as $match) {
-				$array[] = str_replace('"','',$match);
+				$link = str_replace('"','',$match);
+				if(strpos($link,'http://') === false and strpos($link,'https://') === false){
+					$link = $baseUrl.$link;
+					$array[] = $link; 
+				}
+				else{
+					$array[] = $link;
+				}
 			}
 			return($array);
 		}
