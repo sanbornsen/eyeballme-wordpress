@@ -107,7 +107,7 @@ class Eyeballme
 		* @return array $matches will return the all the image urls containing in a string
 	*/
 
-		private function getImagesUrls($string){
+		/*private function getImagesUrls($string){
 			$url  = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 			$baseUrl = "$url$_SERVER[HTTP_HOST]";
 			$imageTags = $this->getImageTags($string);
@@ -126,7 +126,17 @@ class Eyeballme
 				}
 			}
 			return($array);
-		}
+		}*/
+
+		    private function getImagesUrls($string){
+                        
+                        $imageTags = $this->getImageTags($string);
+                        $imageTags = implode(" ", $imageTags);
+                        $regex = '/https?\:\/\/[^\" ]+/i';
+                        preg_match_all($regex, $imageTags, $matches);
+                        return ($matches[0]);
+                }   
+
 
 		
 	/**
